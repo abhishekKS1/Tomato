@@ -12,7 +12,11 @@ const app = express();
 const port = process.env.PORT || 5750;
 
 //middleware
-app.use(cors());
+app.use(cors({
+    origin: 'https://tomato-ruby.vercel.app', // Allow your frontend's origin
+    methods: ['GET', 'POST', 'PUT', 'DELETE'],
+    credentials: true
+}));
 app.use(express.json());
 
 //db connection
