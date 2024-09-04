@@ -14,4 +14,4 @@ export const assets ={
     parcel_icon
 }
 
-export const url = "https://tomato-backend-delta.vercel.app/"
+export const url = "https://tomato-backend-delta.vercel.app"
