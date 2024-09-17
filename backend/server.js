@@ -13,7 +13,7 @@ const port = process.env.PORT || 5750;
 
 //middleware
 app.use(cors({
-    origin: 'https://tomato-ruby.vercel.app', // Allow your frontend's origin
+    origin: '*', // Allow your frontend's origin
     methods: ['GET', 'POST', 'PUT', 'DELETE'],
     credentials: true
 }));
