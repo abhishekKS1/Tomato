@@ -12,18 +12,14 @@ const app = express();
 const port = process.env.PORT || 5750;
 
 //middleware
-app.use(express.json());
 app.use(
    cors({
-      origin: process.env.FRONTEND_URL,
+      origin: "*", // Allow your frontend's origin
+      methods: ["GET", "POST", "PUT", "DELETE"],
       credentials: true,
    })
 );
-
-res.cookie({
-   sameSite: "None",
-   secure: true,
-});
+app.use(express.json());
 
 //db connection
 connectDB();

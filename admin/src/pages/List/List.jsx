@@ -18,7 +18,7 @@ const List = ({ url }) => {
 
    const removeFood = async (foodId) => {
       // console.log(foodId);
-      const response = await axios.post(`${url}/api/food/remove`, {
+      const response = await axios.post(`${url}/api/food/remove/limitreach`, {
          id: foodId,
       });
       await fetchList();
@@ -26,7 +26,7 @@ const List = ({ url }) => {
          toast.success(response.data.message);
          fetchList();
       } else {
-         toast.error("Error");
+         toast.error("Enventory lowest quantity limit reached!");
       }
    };
 
