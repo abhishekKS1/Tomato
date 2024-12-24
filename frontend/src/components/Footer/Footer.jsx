@@ -1,20 +1,28 @@
 import React from "react";
 import "./Footer.css";
 import { assets } from "../../assets/assets";
+import "../Navbar/Navbar.css";
+import { Link } from "react-router-dom";
+import { IoFastFoodOutline } from "react-icons/io5";
 
 const Footer = () => {
    return (
       <div className="footer" id="footer">
          <div className="footer-content">
             <div className="footer-content-left">
-               <img src={assets.logo} alt="" />
+               {/* <img src={assets.logo} alt="" /> */}
+               <Link to="/">
+                  {/* <img src={assets.logo} alt="" className="logo" /> */}
+                  <div className="tomatologo-s2 ">
+                     <IoFastFoodOutline />
+                     <p className="tomatologo-s1">YUMHONEY</p>
+                  </div>
+               </Link>
                <p>
-                  Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                  Numquam alias dolor, reiciendis nihil repellendus fugit
-                  officiis natus obcaecati soluta illum distinctio itaque rerum
-                  provident ipsam vitae reprehenderit dolore animi similique
-                  minima impedit ut corporis.
+                  Bringing delicious meals to your doorstep, made with love and delivered fresh. Enjoy a wide variety of cuisines, crafted
+                  to satisfy every craving. Your satisfaction is our priority!
                </p>
+
                <div className="footer-social-icons">
                   <img src={assets.facebook_icon} alt="" />
                   <img src={assets.twitter_icon} alt="" />
@@ -33,15 +41,13 @@ const Footer = () => {
             <div className="footer-content-right">
                <h2>GET IN TOUCH</h2>
                <ul>
-                  <li>+1-212-456-7890</li>
-                  <li>contact@me.com</li>
+                  <li>+1-999-111-999</li>
+                  <li>contact@yumhoney</li>
                </ul>
             </div>
          </div>
          <hr />
-         <p className="footer-copyright">
-            Copyright 2024 @ Tomato. com - All Right Reserved.
-         </p>
+         <p className="footer-copyright">Copyright 2024 @YUMHONEY - All Right Reserved.</p>
       </div>
    );
 };

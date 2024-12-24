@@ -9,6 +9,23 @@
    width: 150px;
 }
 
+.tomatologo-s1 {
+   font-family: monospace;
+   font-style: italic;
+}
+
+.tomatologo-s2 {
+   display: flex;
+   color: red;
+   gap: 0.2rem; /* Tailwind's gap-1 translates to 0.25rem */
+   font-size: 1.4rem; /* Tailwind's text-xl is 1.25rem */
+   align-items: center;
+   font-weight: 400; /* Tailwind's font-normal corresponds to 400 */
+}
+.addcursor {
+   cursor: pointer;
+}
+
 .navbar-menu {
    display: flex;
    list-style: none;
@@ -57,8 +74,8 @@
    min-height: 10px;
    background-color: tomato;
    border-radius: 5px;
-   top: -8px;
-   right: -8px;
+   top: -3px;
+   right: -4px;
 }
 
 .navbar-profile {

@@ -4,6 +4,9 @@ import "../../assets/assets.js";
 import { assets } from "../../assets/assets.js";
 import { Link, useNavigate } from "react-router-dom";
 import { StoreContext } from "../../context/StoreContext.jsx";
+import { IoFastFoodOutline } from "react-icons/io5";
+import { IoIosBasket } from "react-icons/io";
+import { FaUser } from "react-icons/fa";
 
 const Navbar = ({ setShowLogin }) => {
    const [menu, setMenu] = useState("menu");
@@ -21,7 +24,11 @@ const Navbar = ({ setShowLogin }) => {
    return (
       <div className="navbar">
          <Link to="/">
-            <img src={assets.logo} alt="" className="logo" />
+            {/* <img src={assets.logo} alt="" className="logo" /> */}
+            <div className="tomatologo-s2 ">
+               <IoFastFoodOutline />
+               <p className="tomatologo-s1">YUMHONEY</p>
+            </div>
          </Link>
          <ul className="navbar-menu">
             <Link to="/" onClick={() => setMenu("home")} className={menu === "home" ? "active" : ""}>
@@ -38,10 +45,11 @@ const Navbar = ({ setShowLogin }) => {
             </a>
          </ul>
          <div className="navbar-right">
-            <img src={assets.search_icon} alt="" />
+            {/* <img src={assets.search_icon} alt="" /> */}
             <div className="navbar-search-icon">
                <Link to="/cart">
-                  <img src={assets.basket_icon} alt="" />
+                  {/* <img src={assets.basket_icon} alt="" /> */}
+                  <IoIosBasket size={32} />
                </Link>
                <div className={getTotalCartAmount() === 0 ? "" : "dot"}></div>
             </div>
@@ -49,7 +57,8 @@ const Navbar = ({ setShowLogin }) => {
                <button onClick={() => setShowLogin(true)}>sign in</button>
             ) : (
                <div className="navbar-profile">
-                  <img src={assets.profile_icon} alt="" />
+                  {/* <img src={assets.profile_icon} alt="" /> */}
+                  <FaUser className="addcursor" size={30} />
                   <ul className="nav-profile-dropdown">
                      <li onClick={() => navigate("/myorders")}>
                         <img src={assets.bag_icon} alt="" />
