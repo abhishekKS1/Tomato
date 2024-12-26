@@ -14,8 +14,7 @@ const port = process.env.PORT || 5750;
 //middleware
 app.use(
    cors({
-      origin: "*", // Allow your frontend's origin
-      methods: ["GET", "POST", "PUT", "DELETE"],
+      origin: process.env.FRONTEND_URL,
       credentials: true,
    })
 );
